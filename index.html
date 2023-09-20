@@ -1,34 +1,4 @@
 <!DOCTYPE html>
-<html lang="es">
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-</head>
-<body>
-    <p id="contador">0</p>
-
-    <script>
-        // Función para cargar y mostrar el contador
-        function cargarContador() {
-            let contador = localStorage.getItem('visitas');
-            if (!contador) {
-                contador = 0;
-            } else {
-                contador = parseInt(contador);
-            }
-
-            contador++; // Incrementa el contador en cada visita
-            localStorage.setItem('visitas', contador); // Almacena el contador en localStorage
-
-            const contadorElement = document.getElementById('contador');
-            contadorElement.textContent = `Número de visitas: ${contador}`;
-        }
-
-        // Carga el contador al cargar la página
-        window.addEventListener('load', cargarContador);
-    </script>
 <head>
 
     <title>Cobat 03</title>
@@ -67,6 +37,35 @@
 </head>
 <body>
     <header> 
+    <html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+<body>
+    <p id="contador">0</p>
+
+    <script>
+        // Función para cargar y mostrar el contador
+        function cargarContador() {
+            let contador = localStorage.getItem('visitas');
+            if (!contador) {
+                contador = 0;
+            } else {
+                contador = parseInt(contador);
+            }
+
+            contador++; // Incrementa el contador en cada visita
+            localStorage.setItem('visitas', contador); // Almacena el contador en localStorage
+
+            const contadorElement = document.getElementById('contador');
+            contadorElement.textContent = `Número de visitas: ${contador}`;
+        }
+
+        // Carga el contador al cargar la página
+        window.addEventListener('load', cargarContador);
+    </script>
         <img src="assets/img/339408718_225080080187818_8913128001647644017_n.jpg" alt="Logo de COBAT">
     </header>
     <h1> <img src="assets/img/logo_cobat.png" alt="Logo de COBAT"> <p>"Por la cultura como creadora de la paz"</p></h1>
