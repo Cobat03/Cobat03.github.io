@@ -1,56 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-    <div class="encabezado" id="encabezado">
-        <div class="contenido-encabezado">
-        <a class="logo" href="#"><img src="assets/img/1694923258427.png" alt="Logo"></a>
-        <h2 style="color: #b69d2f;">Colegio de Bachilleres del Estado de Tlaxcala Plantel 03</h2>
 
-            <ul class="menu">
-                <li><a href="#"><a href="#contacto">Contacto</a>
-</a></li>
-                <li><a href="#">   <?php
-$archivo = "contador.txt";
-$contador = (file_exists($archivo)) ? (int)file_get_contents($archivo) : 0;
-$contador++;
-file_put_contents($archivo, $contador);
-echo "Número de visitas: " . $contador;
-?>
-
-</a></li>
-            </ul>
-        </div>
-    </div>
-</body>
-</html>
-            </ul>
-        </div>
-    </div>
-    <script>
-        // Obtén el encabezado por su ID
-        const encabezado = document.getElementById('encabezado');
-        let ultimoDesplazamiento = 0;
-
-        // Función para controlar el desplazamiento
-        window.addEventListener('scroll', () => {
-            const desplazamientoActual = window.pageYOffset;
-
-            // Si el desplazamiento actual es mayor que el anterior, oculta el encabezado
-            if (desplazamientoActual > ultimoDesplazamiento) {
-                encabezado.style.top = '-100px'; // Puedes ajustar el valor según la altura de tu encabezado
-            } else {
-                encabezado.style.top = '0';
-            }
-
-            // Actualiza el valor del último desplazamiento
-            ultimoDesplazamiento = desplazamientoActual;
-        });
-    </script>
-</body>
 </html>
     <title>Cobat 03</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
@@ -257,5 +206,7 @@ echo "Número de visitas: " . $contador;
     </footer>
 </body>
 </html>
+
+
 
 
