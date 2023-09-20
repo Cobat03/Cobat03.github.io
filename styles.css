@@ -250,7 +250,7 @@ body {
   margin: 0 5px;
   cursor: pointer;
   position: absolute;
-  left: 370px;
+  left: 300px;
   top: 300px;
   transition: background-color 0.3s, transform 0.3s;
 }
@@ -263,7 +263,7 @@ body {
   margin: 0 5px;
   cursor: pointer;
   position: absolute;
-  right: 370px;
+  right: 300px;
   top: 300px;
   transition: background-color 0.3s, transform 0.3s;
 }
