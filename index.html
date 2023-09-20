@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="encabezado" id="encabezado">
+        <div class="contenido-encabezado">
+        <a class="logo" href="#"><img src="assets/img/1694923258427.png" alt="Logo"></a>
+        <h2 style="color: #b69d2f;">Colegio de Bachilleres del Estado de Tlaxcala Plantel 03</h2>
+
+            <ul class="menu">
+                <li><a href="#"><a href="#contacto">Contacto</a>
+</a></li>
+                <li><a href="#">   <?php
+$archivo = "contador.txt";
+$contador = (file_exists($archivo)) ? (int)file_get_contents($archivo) : 0;
+$contador++;
+file_put_contents($archivo, $contador);
+echo "Número de visitas: " . $contador;
+?>
+
+</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+            </ul>
+        </div>
+    </div>
+    <script>
+        // Obtén el encabezado por su ID
+        const encabezado = document.getElementById('encabezado');
+        let ultimoDesplazamiento = 0;
+
+        // Función para controlar el desplazamiento
+        window.addEventListener('scroll', () => {
+            const desplazamientoActual = window.pageYOffset;
+
+            // Si el desplazamiento actual es mayor que el anterior, oculta el encabezado
+            if (desplazamientoActual > ultimoDesplazamiento) {
+                encabezado.style.top = '-100px'; // Puedes ajustar el valor según la altura de tu encabezado
+            } else {
+                encabezado.style.top = '0';
+            }
+
+            // Actualiza el valor del último desplazamiento
+            ultimoDesplazamiento = desplazamientoActual;
+        });
+    </script>
+</body>
+</html>
+<head>
+    <title>Cobat 03</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"> 
+    <button id="scroll-to-top" style="display: none; position: fixed; bottom: 20px; right: 10px; z-index: 9999;">
+        ↑ 
+    </button>
+    <script>
+        function scrollToTop() {
+            const scrollDuration = 300; 
+            const scrollStep = -window.scrollY / (scrollDuration / 15);
+            
+            const scrollInterval = setInterval(function(){
+                if (window.scrollY !== 0) {
+                    window.scrollBy(0, scrollStep);
+                } else {
+                    clearInterval(scrollInterval);
+                }
+            },15);
+        }
+        const scrollToTopButton = document.getElementById('scroll-to-top');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) { 
+                scrollToTopButton.style.display = 'block';
+            } else {
+                scrollToTopButton.style.display = 'none';
+            }
+        });
+        scrollToTopButton.addEventListener('click', function() {
+            scrollToTop();
+        });
+    </script>
+</head>
+<body>
+    <header> <br><br><br><br><br>
+        <img src="assets/img/339408718_225080080187818_8913128001647644017_n.jpg" alt="Logo de COBAT">
+    </header>
+    <h1> <img src="assets/img/logo_cobat.png" alt="Logo de COBAT"> <p>"Por la cultura como creadora de la paz"</p></h1>
+    </header>
+    <section id="inicio" style="text-align: center;">
+    <h2>¡Bienvenidos al Colegio de Bachilleres del Estado de Tlaxcala Plantel 03!</h2>
+    <p style="text-align: justify;">En nuestro campus, el aprendizaje cobra vida. Aquí, cada estudiante se sumerge en una educación de calidad en un entorno enriquecedor. Juntos, construiremos un futuro brillante lleno de oportunidades y crecimiento. ¡Explora, aprende y crece con nosotros!.</p>
+    <div style="display: inline-block;">
+        <iframe width="640" height="360" src="https://www.youtube.com/embed/0E1aSwc39DA?si=2UL0JizeEE58uFd2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" frameborder="0" allowfullscreen></iframe>
+    </div>
+</section>
+<section id="mision">
+    <h4>Misión</h4>
+    <p class="contenido" style="text-align: justify;">Somos una institución de educación media superior en el estado de Tlaxcala cuyos estudiantes obtienen un perfil de egreso a partir de la formación científica y holística que fortalecen sus conocimientos, desarrollan habilidades y aptitudes para la vida, para transitar de esta institución a nivel superior y alcanzar su formación profesional.</p>
+    <img src="assets/img/kisspng-intern-education-training-school-learning-ampquotampquot-5bfdc8adbe8ce2.5949135515433586377805.png" alt="mision">
+</section>
+<section id="vision">
+    <h3>Visión</h3>
+    <p class="contenido" style="text-align: justify;">Ser una institución que logre la formación integral de sus estudiantes a partir del fortalecimiento del proceso, enseñanza-aprendizaje, en ambientes educativos científicos, tecnológicos, humanistas y lúdicos que los sitúen de forma en un contexto profesional y una mejor calidad de vida.</p>
+    <img src="assets/img/kisspng--5bf6fd65c2e647.0235671615429133817983.png" alt="vision">
+</section>
+<section id="oferta-educativa">
+    <h2>Nuestra Oferta Educativa</h2>
+    <ul>
+        <li>Administración</li>
+        <li>Higiene y Salud Comunitaria</li>
+        <li>Contabilidad</li>
+        <li>Informática</li>
+    </ul>
+    <br>
+    <br>
+    <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+        <img src="assets/img/imagen laboratorio.jpg" alt="Imagen de actividades extraescolares" width="500" style="margin-right: 10px;">
+        <img src="assets/img/laboratorio de informatica.jpg" alt="Imagen de actividades extraescolares" width="500" style="margin-left: 40px;">
+    </div>
+    <div style="margin-top: 20px;"></div>
+    <div style="display: flex; justify-content: space-between;">
+        <img src="assets/img/Imagen de WhatsApp 2023-09-01 a las 14.26.06.jpg" alt="Imagen de actividades extraescolares" width="500" style="margin-right: 10px;">
+        <img src="assets/img/laboratorio de ingles.jpg" alt="Imagen de actividades extraescolares" width="500" style="margin-left: 40px;">
+    </div>
+</section>
+<section id="actividades">
+    <h2>Actividades Extraescolares</h2>
+    <p>Además de nuestra oferta educativa, ofrecemos una variedad de actividades extracurriculares para enriquecer la experiencia de nuestros estudiantes:</p>
+    <ul>
+        <li>Clubes deportivos</li>
+        <li>Clubes artísticos</li>
+        <li>Talleres de música</li>
+        <li>Eventos culturales</li>
+    </ul>
+    <br>
+    <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+        <img src="assets/img/342525218_940112617327139_7639772955443690379_n.jpg" alt="Imagen de actividades extraescolares" width="500" style="margin-right: 10px;">
+        <img src="assets/img/342328240_560297822647540_8911653963121395589_n.jpg" alt="Imagen de actividades extraescolares" width="500" style="margin-left: 40px;">
+    </div>
+    <div style="margin-top: 20px;"></div>
+    <div style="display: flex; justify-content: space-between;">
+        <img src="assets/img/imagen cobat 2.jpg" alt="Imagen de actividades extraescolares" width="500" style="margin-right: 10px;">
+        <img src="assets/img/342887854_6387524367977353_1635438616493895475_n.jpg" alt="Imagen de actividades extraescolares" width="500" style="margin-left: 40px;">
+    </div>
+</section>
+        <section id="proximos-eventos">
+        <h5>Próximos eventos e Información</h5>
+</head>
+<body>
+    <div class="image-menu">
+        <a href="assets/img/imagenes de eventos proximos/evento 1.jpg"><img src="assets/img/imagenes de eventos proximos/evento 1.jpg" alt="Imagen 1"></a>
+        <a href="assets/img/imagenes de eventos proximos/evento 2.jpg"><img src="assets/img/imagenes de eventos proximos/evento 2.jpg" alt="Imagen 2"></a>
+        <a href="assets/img/imagenes de eventos proximos/evento 3.jpg"><img src="assets/img/imagenes de eventos proximos/evento 3.jpg" alt="Imagen 3"></a>
+        <a href="assets/img/imagenes de eventos proximos/evento 4.jpg"><img src="assets/img/imagenes de eventos proximos/evento 4.jpg" alt="Imagen 4"></a>
+    </div>
+    <div id="lightbox">
+        <div id="lightbox-exit">×</div>
+        <div id="lightbox-controls">
+            <button id="lightbox-prev"><</button>
+            <button id="lightbox-next">></button>
+        </div>
+        <img src="" alt="" id="lightbox-image">
+    </div>
+    <script>
+        const imageLinks = document.querySelectorAll('.image-menu a');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightbox-image');
+        const lightboxPrev = document.getElementById('lightbox-prev');
+        const lightboxNext = document.getElementById('lightbox-next');
+        const lightboxExit = document.getElementById('lightbox-exit');
+        let currentIndex = 0;
+        // Agregar evento de clic a cada enlace de imagen
+        imageLinks.forEach((link, index) => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                currentIndex = index;
+                openLightbox();
+            });
+        });
+        function openLightbox() {
+            lightbox.style.display = 'block';
+            updateLightboxImage();
+        }
+
+        function closeLightbox() {
+            lightbox.style.display = 'none';
+        }
+
+        function updateLightboxImage() {
+            const imageUrl = imageLinks[currentIndex].href;
+            lightboxImage.src = imageUrl;
+        }
+
+        lightboxPrev.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateLightboxImage();
+            }
+        });
+
+        lightboxNext.addEventListener('click', () => {
+            if (currentIndex < imageLinks.length - 1) {
+                currentIndex++;
+                updateLightboxImage();
+            }
+        });
+
+        lightboxExit.addEventListener('click', () => {
+            closeLightbox();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (lightbox.style.display === 'block') {
+                if (e.key === 'ArrowLeft') {
+                    if (currentIndex > 0) {
+                        currentIndex--;
+                        updateLightboxImage();
+                    }
+                } else if (e.key === 'ArrowRight') {
+                    if (currentIndex < imageLinks.length - 1) {
+                        currentIndex++;
+                        updateLightboxImage();
+                    }
+                } else if (e.key === 'Escape') {
+                    closeLightbox();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+</section>
+    <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Si deseas obtener más información sobre nuestra escuela y lo que ofrecemos, no dudes en ponerte en contacto con nosotros:</p>
+    <address>
+        Dirección: <a href="https://goo.gl/maps/xDpT7dYmMxLYbPmg9" target="_blank" style="color: white;"> Calle 16 de Octubre, No. 15 Col. El Palmar Calpulalpan Tlaxcala C.P. 90203</a>
+      <br><br>  Teléfono: (749)-91-81-460 <br> <br>   
+       Para mas infirmacion:
+       <nav>
+        <ul>       
+<a href="https://www.facebook.com/profile.php?id=100082128625170&mibextid=9R9pXO" target="_blank">
+    <img src="assets/img/icons/vecteezy_facebook-png-icon_16716447_337.png" alt="Logo de Facebook" width="46" height="44.5" style="margin-right: 10px;">
+</a>
+<a href="mailto:cobatcalp@gmail.com">
+    <img src="assets/img/icons/icones-de-messagerie-blueue.png" alt="Icono de correo electrónico" width="45" height="45" style="margin-right: 10px;">
+</a>
+     </ul>
+    </nav>
+        <img src="assets/img/logo cobacho.jpg" alt="Logo de COBAT">
+    </address>
+</section>
+    <footer>
+        <p>Derechos Reservados &copy; 2023 COBAT 03 CALPULALPAN</p>
+    </footer>
+</body>
+</html>
+
