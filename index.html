@@ -3,30 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Estilos para el encabezado */
+        .encabezado {
+            background-color: #fff;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .contenido-encabezado {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo img {
+            max-width: 100px; /* Ajusta el tamaño máximo del logo */
+        }
+
+        h2 {
+            font-size: 18px; /* Ajusta el tamaño de la fuente para dispositivos móviles */
+            color: #b69d2f;
+        }
+
+        .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .menu li {
+            margin-right: 15px;
+        }
+
+        /* Estilos responsivos */
+        @media (max-width: 768px) {
+            .contenido-encabezado {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .logo img {
+                max-width: 80px; /* Ajusta el tamaño máximo del logo en dispositivos móviles */
+            }
+
+            h2 {
+                font-size: 16px; /* Ajusta el tamaño de la fuente en dispositivos móviles */
+            }
+
+            .menu {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .menu li {
+                margin: 5px 0;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="encabezado" id="encabezado">
         <div class="contenido-encabezado">
-        <a class="logo" href="#"><img src="assets/img/1694923258427.png" alt="Logo"></a>
-        <h2 style="color: #b69d2f;">Colegio de Bachilleres del Estado de Tlaxcala Plantel 03</h2>
-
+            <a class="logo" href="#"><img src="assets/img/1694923258427.png" alt="Logo"></a>
+            <h2>Colegio de Bachilleres del Estado de Tlaxcala Plantel 03</h2>
             <ul class="menu">
-                <li><a href="#"><a href="#contacto">Contacto</a>
-</a></li>
-                <li><a href="#">   <?php
-$archivo = "contador.txt";
-$contador = (file_exists($archivo)) ? (int)file_get_contents($archivo) : 0;
-$contador++;
-file_put_contents($archivo, $contador);
-echo "Número de visitas: " . $contador;
-?>
-
-</a></li>
-            </ul>
-        </div>
-    </div>
-</body>
-</html>
+                <li><a href="#contacto">Contacto</a></li>
+                <li>
+                    <?php
+                    $archivo = "contador.txt";
+                    $contador = (file_exists($archivo)) ? (int)file_get_contents($archivo) : 0;
+                    $contador++;
+                    file_put_contents($archivo, $contador);
+                    echo "Número de visitas: " . $contador;
+                    ?>
+                </li>
             </ul>
         </div>
     </div>
@@ -52,7 +105,7 @@ echo "Número de visitas: " . $contador;
     </script>
 </body>
 </html>
-<head>
+
     <title>Cobat 03</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
