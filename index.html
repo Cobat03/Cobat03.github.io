@@ -1,5 +1,67 @@
 <!DOCTYPE html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="menu-desplegable">
+        <button id="toggle-menu">&#8230;</button>
+        <ul class="opciones-menu" id="opciones-menu">
+            <li><!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Visitas</title>
+</head>
+<body>
+    <p id="contador">0</p>
+
+    <script>
+        // Función para cargar y mostrar el contador
+        function cargarContador() {
+            let contador = localStorage.getItem('visitas');
+            if (!contador) {
+                contador = 0;
+            } else {
+                contador = parseInt(contador);
+            }
+
+            contador++; // Incrementa el contador en cada visita
+            localStorage.setItem('visitas', contador); // Almacena el contador en localStorage
+
+            const contadorElement = document.getElementById('contador');
+            contadorElement.textContent = `Número de visitas: ${contador}`;
+        }
+
+        // Carga el contador al cargar la página
+        window.addEventListener('load', cargarContador);
+    </script>
+</body>
+</html>
+</li>
+            <li><li><a href="#contacto">contacto</a></li></li>
+        </ul>
+    </div>
+
+    <!-- Resto de tu contenido HTML -->
+
+    <script>
+        const toggleMenu = document.getElementById('toggle-menu');
+        const opcionesMenu = document.getElementById('opciones-menu');
+
+        toggleMenu.addEventListener('click', () => {
+            opcionesMenu.classList.toggle('mostrar-menu');
+        });
+    </script>
+</body>
+</html>
+
+
+<head>
+
     <title>Cobat 03</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
@@ -209,6 +271,8 @@
     </footer>
 </body>
 </html>
+
+
 
 
 
