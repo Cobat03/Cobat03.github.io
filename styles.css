@@ -1,12 +1,13 @@
 /* Estilo para el encabezado */
-  .encabezado {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(90, 28, 119, 0.7);
-    padding: 15px 0;
-    z-index: 999;
+.encabezado {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 1600px; /* Cambia este valor para alargar el encabezado */
+  background-color: rgba(90, 28, 119, 0.7);
+  padding: 15px 0;
+  z-index: 999;
 }
 
 /* Contenedor para el contenido del encabezado */
@@ -329,5 +330,3 @@ a img:hover {
 }
 
 
-
-  
