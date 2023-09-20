@@ -5,8 +5,8 @@
   text-align: center;
   position: fixed;
   top: 0;
-  left: 50%; /* Centrar el menú horizontalmente */
-  transform: translateX(-50%);
+  left: 10%; /* Cambia el valor para mover el menú a la izquierda */
+  transform: translateX(0%); /* Ajusta la transformación a 0% para centrarlo */
   z-index: 999;
   width: 200px; /* Ancho del menú desplegable */
   border-radius: 5px;
