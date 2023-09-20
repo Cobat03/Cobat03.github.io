@@ -1,4 +1,4 @@
-  /* Estilo para el encabezado */
+/* Estilo para el encabezado */
   .encabezado {
     position: fixed;
     top: 0;
@@ -249,7 +249,7 @@ body {
   margin: 0 5px;
   cursor: pointer;
   position: absolute;
-  left: 80px;
+  left: 350px;
   top: 300px;
   transition: background-color 0.3s, transform 0.3s;
 }
@@ -262,7 +262,7 @@ body {
   margin: 0 5px;
   cursor: pointer;
   position: absolute;
-  right: 80px;
+  right: 350px;
   top: 300px;
   transition: background-color 0.3s, transform 0.3s;
 }
@@ -310,56 +310,22 @@ a img:hover {
   background-color: rgba(255, 255, 255, 0.8); /* Color más oscuro al seleccionar */
   transform: scale(1.1); /* Ampliar un poco al seleccionar */
 }
-/* Estilos CSS para pantallas grandes */
-/* ... Tu CSS existente ... */
-
-/* Media query para dispositivos móviles */
 @media (max-width: 768px) {
-  .encabezado {
-    padding: 10px 0; /* Reduzco el espacio interno para dispositivos móviles */
-  }
-
   .logo img {
-    max-width: 60px; /* Ancho máximo reducido para dispositivos móviles */
+      max-width: 60px; /* Ancho máximo reducido para dispositivos móviles */
   }
 
   .logo {
-    font-size: 18px; /* Tamaño de fuente aún más reducido para dispositivos móviles */
+      font-size: 18px; /* Tamaño de fuente aún más reducido para dispositivos móviles */
   }
 
   .menu {
-    flex-direction: column; /* Cambia la dirección de la lista para dispositivos móviles */
+      flex-direction: column; /* Cambia la dirección de la lista para dispositivos móviles */
   }
 
   .menu li {
-    margin: 5px 0; /* Espaciado entre elementos de la lista en dispositivos móviles */
-  }
-
-  /* Aquí puedes agregar más estilos específicos para dispositivos móviles según sea necesario */
-
-  /* Estilos específicos para el botón de scroll en dispositivos móviles */
-  #scroll-to-top {
-    width: 35px; /* Reduzco el ancho del botón */
-    height: 35px; /* Reduzco la altura del botón */
-    font-size: 18px; /* Tamaño de fuente reducido para dispositivos móviles */
-    bottom: 15px; /* Ajusto la posición del botón en la parte inferior */
-  }
-
-  .arrow-up {
-    border-left: 10px solid transparent; /* Reduzco el tamaño de la flecha */
-    border-right: 10px solid transparent; /* Reduzco el tamaño de la flecha */
-    border-bottom: 10px solid #ffffff; /* Reduzco el tamaño y el color de la flecha */
+      margin: 5px 0; /* Espaciado entre elementos de la lista en dispositivos móviles */
   }
 }
-/* Media query para dispositivos móviles */
-@media (max-width: 768px) {
-  /* Otros estilos para dispositivos móviles (ya existentes) */
 
-  /* Estilos para limitar el tamaño de las imágenes */
-  img {
-    max-width: 100%; /* Las imágenes tendrán un ancho máximo del 100% del contenedor */
-    height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
-  }
 
-  /* Si deseas limitar aún más el tamaño de imágenes específicas, puedes utilizar selectores más específicos aquí */
-}
