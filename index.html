@@ -1,8 +1,62 @@
 <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="encabezado" id="encabezado">
+        <div class="contenido-encabezado">
+        <a class="logo" href="#"><img src="assets/img/1694923258427.png" alt="Logo"></a>
+        <h2 style="color: #b69d2f;">Colegio de Bachilleres del Estado de Tlaxcala Plantel 03</h2>
 
+            <ul class="menu">
+                <li><a href="#"><a href="#contacto">Contacto</a>
+</a></li>
+                <li><a href="#">   <?php
+$archivo = "contador.txt";
+$contador = (file_exists($archivo)) ? (int)file_get_contents($archivo) : 0;
+$contador++;
+file_put_contents($archivo, $contador);
+echo "visitas: " . $contador;
+?>
+
+</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
 </html>
+            </ul>
+        </div>
+    </div>
+    <script>
+        // Obtén el encabezado por su ID
+        const encabezado = document.getElementById('encabezado');
+        let ultimoDesplazamiento = 0;
+
+        // Función para controlar el desplazamiento
+        window.addEventListener('scroll', () => {
+            const desplazamientoActual = window.pageYOffset;
+
+            // Si el desplazamiento actual es mayor que el anterior, oculta el encabezado
+            if (desplazamientoActual > ultimoDesplazamiento) {
+                encabezado.style.top = '-100px'; // Puedes ajustar el valor según la altura de tu encabezado
+            } else {
+                encabezado.style.top = '0';
+            }
+
+            // Actualiza el valor del último desplazamiento
+            ultimoDesplazamiento = desplazamientoActual;
+        });
+    </script>
+</body>
+</html>
+<head>
+
     <title>Cobat 03</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
 <body>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"> 
     <button id="scroll-to-top" style="display: none; position: fixed; bottom: 20px; right: 10px; z-index: 9999;">
@@ -33,11 +87,13 @@
             scrollToTop();
         });
     </script>
+</head>
 <body>
     <header> <br><br><br><br><br>
         <img src="assets/img/339408718_225080080187818_8913128001647644017_n.jpg" alt="Logo de COBAT">
     </header>
     <h1> <img src="assets/img/logo_cobat.png" alt="Logo de COBAT"> <p>"Por la cultura como creadora de la paz"</p></h1>
+    </header>
     <section id="inicio" style="text-align: center;">
     <h2>¡Bienvenidos al Colegio de Bachilleres del Estado de Tlaxcala Plantel 03!</h2>
     <p style="text-align: justify;">En nuestro campus, el aprendizaje cobra vida. Aquí, cada estudiante se sumerge en una educación de calidad en un entorno enriquecedor. Juntos, construiremos un futuro brillante lleno de oportunidades y crecimiento. ¡Explora, aprende y crece con nosotros!.</p>
@@ -97,6 +153,7 @@
 </section>
         <section id="proximos-eventos">
         <h5>Próximos eventos e Información</h5>
+</head>
 <body>
     <div class="image-menu">
         <a href="assets/img/imagenes de eventos proximos/evento 1.jpg"><img src="assets/img/imagenes de eventos proximos/evento 1.jpg" alt="Imagen 1"></a>
@@ -206,6 +263,8 @@
     </footer>
 </body>
 </html>
+
+
 
 
 
