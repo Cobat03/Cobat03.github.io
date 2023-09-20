@@ -89,26 +89,7 @@
     transform: scale(1.05);
 }
 
-/* ... Estilos para otros elementos ... */
 
-/* Estilos para dispositivos móviles */
-@media (max-width: 768px) {
-    .logo img {
-        max-width: 60px; /* Ancho máximo reducido para dispositivos móviles */
-    }
-
-    .logo {
-        font-size: 18px; /* Tamaño de fuente aún más reducido para dispositivos móviles */
-    }
-
-    .menu {
-        flex-direction: column; /* Cambia la dirección de la lista para dispositivos móviles */
-    }
-
-    .menu li {
-        margin: 5px 0; /* Espaciado entre elementos de la lista en dispositivos móviles */
-    }
-}
 
 
 
