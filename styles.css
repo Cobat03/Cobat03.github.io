@@ -351,3 +351,15 @@ a img:hover {
     border-bottom: 10px solid #ffffff; /* Reduzco el tamaño y el color de la flecha */
   }
 }
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+  /* Otros estilos para dispositivos móviles (ya existentes) */
+
+  /* Estilos para limitar el tamaño de las imágenes */
+  img {
+    max-width: 100%; /* Las imágenes tendrán un ancho máximo del 100% del contenedor */
+    height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+  }
+
+  /* Si deseas limitar aún más el tamaño de imágenes específicas, puedes utilizar selectores más específicos aquí */
+}
