@@ -1,3 +1,27 @@
+/* Estilos para el lightbox en dispositivos móviles */
+@media (max-width: 768px) {
+  #lightbox-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+  }
+
+  #lightbox-prev, #lightbox-next {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  #lightbox-prev {
+    margin-right: 20px;
+  }
+}
 
 /* Estilo para la lista de navegación */
 .menu {
@@ -291,5 +315,7 @@ a img:hover {
       margin: 5px 0; /* Espaciado entre elementos de la lista en dispositivos móviles */
   }
 }
+
+
 
 
