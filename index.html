@@ -183,22 +183,21 @@
         });
         
         // Agregar eventos táctiles para cambiar de imagen en el lightbox
-lightbox.addEventListener('touchstart', (e) => {
-    touchStartX = e.touches[0].clientX;
-});
+        lightbox.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].clientX;
+        });
 
-lightbox.addEventListener('touchend', (e) => {
-    touchEndX = e.changedTouches[0].clientX;
-    const deltaX = touchEndX - touchStartX; // Invertir la resta aquí
-    if (deltaX > 50 && currentIndex < imageLinks.length - 1) { // Cambiar las condiciones
-        currentIndex++;
-        updateLightboxImage();
-    } else if (deltaX < -50 && currentIndex > 0) { // Cambiar las condiciones
-        currentIndex--;
-        updateLightboxImage();
-    }
-});
-
+        lightbox.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].clientX;
+            const deltaX = touchStartX - touchEndX;
+            if (deltaX > 50 && currentIndex > 0) {
+                currentIndex--;
+                updateLightboxImage();
+            } else if (deltaX < -50 && currentIndex < imageLinks.length - 1) {
+                currentIndex++;
+                updateLightboxImage();
+            }
+        });
     </script>
 </body>
 </html>
@@ -228,7 +227,6 @@ lightbox.addEventListener('touchend', (e) => {
     </footer>
 </body>
 </html>
-
 
 
 
