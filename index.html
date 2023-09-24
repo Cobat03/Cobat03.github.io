@@ -196,19 +196,23 @@
                 }
             }
         });
-        
-        lightbox.addEventListener('touchend', (e) => {
-    touchEndX = e.changedTouches[0].clientX;
-    const deltaX = touchEndX - touchStartX; // Cambia el orden de resta
+       
+        // Agregar eventos táctiles para cambiar de imagen en el lightbox
+        lightbox.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].clientX;
+        });
 
-    if (deltaX > 50 && currentIndex < imageLinks.length - 1) { // Cambia la condición para deslizar a la derecha
-        currentIndex++;
-        updateLightboxImage();
-    } else if (deltaX < -50 && currentIndex > 0) { // Cambia la condición para deslizar a la izquierda
-        currentIndex--;
-        updateLightboxImage();
-    }
-});
+        lightbox.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].clientX;
+            const deltaX = touchEndX - touchStartX ;
+            if (deltaX > 50 && currentIndex > 0) {
+                currentIndex--;
+                updateLightboxImage();
+            } else if (deltaX < -50 && currentIndex < imageLinks.length - 1) {
+                currentIndex++;
+                updateLightboxImage();
+            }
+        });
 
     </script>
 </body>
