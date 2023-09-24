@@ -197,22 +197,19 @@
             }
         });
         
-        // Agregar eventos táctiles para cambiar de imagen en el lightbox
-        lightbox.addEventListener('touchstart', (e) => {
-            touchStartX = e.touches[0].clientX;
-        });
-
         lightbox.addEventListener('touchend', (e) => {
-            touchEndX = e.changedTouches[0].clientX;
-            const deltaX = touchStartX - touchEndX;
-            if (deltaX > 50 && currentIndex > 0) {
-                currentIndex--;
-                updateLightboxImage();
-            } else if (deltaX < -50 && currentIndex < imageLinks.length - 1) {
-                currentIndex++;
-                updateLightboxImage();
-            }
-        });
+    touchEndX = e.changedTouches[0].clientX;
+    const deltaX = touchEndX - touchStartX; // Cambia el orden de resta
+
+    if (deltaX > 50 && currentIndex < imageLinks.length - 1) { // Cambia la condición para deslizar a la derecha
+        currentIndex++;
+        updateLightboxImage();
+    } else if (deltaX < -50 && currentIndex > 0) { // Cambia la condición para deslizar a la izquierda
+        currentIndex--;
+        updateLightboxImage();
+    }
+});
+
     </script>
 </body>
 </html>
